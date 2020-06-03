@@ -19,4 +19,4 @@ install:
   # - node bot.js
 
 # Don't actually build.
-build: off
+build: on
