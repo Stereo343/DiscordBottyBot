@@ -5,9 +5,10 @@ environment:
 # Install scripts. (runs after repo cloning)
 install:
   # Get the latest stable version of Node.js or io.js
-  - ps: Install-Product node 12
-  # install modules
-  - npm install
+  # - ps: Install-Product node 12
+  - nvm use 12.16.3
+  - apt-get install yarn
+  - yarn
 
 # Post-install test scripts.
 # test_script:
@@ -19,4 +20,4 @@ install:
   # - node bot.js
 
 # Don't actually build.
-build: on
+build: off
